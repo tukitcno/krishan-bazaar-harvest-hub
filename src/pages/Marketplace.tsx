@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Tractor, Wheat, Droplet, Sun, Cpu, Seedling, Leaf } from "lucide-react";
+import { ShoppingCart, Tractor, Wheat, Droplet, Sun, Cpu, Leaf, Plant } from "lucide-react";
 import MobileAppBanner from "@/components/MobileAppBanner";
 
 const Marketplace = () => {
@@ -41,7 +41,7 @@ const Marketplace = () => {
       category: "Technology",
       price: "৳12,500",
       description: "Real-time soil nutrient and moisture monitoring with smartphone alerts",
-      icon: Seedling
+      icon: Plant
     },
     {
       title: "AI Crop Analysis Platform",
