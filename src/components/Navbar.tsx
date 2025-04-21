@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Leaf, Store, BarChart2 } from "lucide-react";
+import { Leaf, Store, BarChart2, Award, Star, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -21,6 +21,18 @@ const Navbar = () => {
             <Link to="/marketplace" className="text-gray-700 hover:text-primary flex items-center gap-2">
               <Store className="h-4 w-4" />
               Marketplace
+            </Link>
+            <Link to="/investment-plans" className="text-gray-700 hover:text-primary flex items-center gap-2">
+              <Briefcase className="h-4 w-4" />
+              Investment Plans
+            </Link>
+            <Link to="/impact" className="text-gray-700 hover:text-primary flex items-center gap-2">
+              <Star className="h-4 w-4" />
+              Impact
+            </Link>
+            <Link to="/success-stories" className="text-gray-700 hover:text-primary flex items-center gap-2">
+              <Award className="h-4 w-4" />
+              Success Stories
             </Link>
             <Button className="bg-primary text-white hover:bg-primary/90">Get Started</Button>
           </div>
