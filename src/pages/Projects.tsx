@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart2, DollarSign } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const Projects = () => {
   const projects = [
@@ -36,8 +37,8 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden">
-              <img 
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <OptimizedImage 
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-48 object-cover"
@@ -57,7 +58,7 @@ const Projects = () => {
                     <span>Expected Returns: {project.returns}</span>
                   </div>
                 </div>
-                <Button className="w-full mt-4">
+                <Button className="w-full mt-4 hover:bg-primary/90 transition-colors">
                   Invest Now
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>

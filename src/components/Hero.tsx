@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 const Hero = () => {
   return (
@@ -30,7 +31,7 @@ const Hero = () => {
           </div>
           <div className="relative">
             <div className="relative overflow-hidden rounded-lg shadow-2xl">
-              <img
+              <OptimizedImage
                 src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
                 alt="Advanced Agricultural Technology"
                 className="rounded-lg shadow-lg object-cover h-[500px] w-full"

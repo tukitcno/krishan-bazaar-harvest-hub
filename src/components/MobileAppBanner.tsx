@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { AppleIcon, PlayIcon } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 const MobileAppBanner = () => {
   return (
@@ -33,17 +34,17 @@ const MobileAppBanner = () => {
           <div className="relative">
             <div className="flex justify-center">
               <div className="relative z-10 mx-2">
-                <img 
+                <OptimizedImage 
                   src="https://cdn.dribbble.com/users/1998175/screenshots/15459384/media/48bfd64313c75b68fcb51a0f7799d123.png" 
                   alt="KrishanBazaar Mobile App on iPhone" 
-                  className="h-[500px] rounded-2xl shadow-xl" 
+                  className="h-[500px] rounded-2xl shadow-xl object-cover" 
                 />
               </div>
               <div className="relative mx-2 mt-8">
-                <img 
+                <OptimizedImage 
                   src="https://cdn.dribbble.com/users/1998175/screenshots/15459384/media/66509fa6c2f36d3f890f2d73314b1599.png" 
                   alt="KrishanBazaar Mobile App on Android" 
-                  className="h-[500px] rounded-2xl shadow-xl" 
+                  className="h-[500px] rounded-2xl shadow-xl object-cover" 
                 />
               </div>
             </div>

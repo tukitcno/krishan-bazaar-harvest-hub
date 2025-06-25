@@ -2,7 +2,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Users } from "lucide-react";
+import { Award, Users, Star } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const SuccessStories = () => {
   const womenEntrepreneurs = [
@@ -90,12 +91,12 @@ const SuccessStories = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {womenEntrepreneurs.map((entrepreneur, index) => (
-                <Card key={index} className="overflow-hidden">
+                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <div className="grid md:grid-cols-2">
-                    <img 
+                    <OptimizedImage 
                       src={entrepreneur.image} 
                       alt={entrepreneur.name}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover min-h-[250px]"
                     />
                     <div>
                       <CardHeader>
@@ -103,7 +104,7 @@ const SuccessStories = () => {
                         <CardDescription>{entrepreneur.location} | {entrepreneur.business}</CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <p className="mb-4">{entrepreneur.story}</p>
+                        <p className="mb-4 text-sm">{entrepreneur.story}</p>
                         <div className="bg-primary/10 p-3 rounded-md">
                           <p className="font-semibold text-primary">Monthly Earnings: {entrepreneur.earnings}</p>
                         </div>
@@ -123,12 +124,12 @@ const SuccessStories = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {youngEntrepreneurs.map((entrepreneur, index) => (
-                <Card key={index} className="overflow-hidden">
+                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <div className="grid md:grid-cols-2">
-                    <img 
+                    <OptimizedImage 
                       src={entrepreneur.image} 
                       alt={entrepreneur.name}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover min-h-[250px]"
                     />
                     <div>
                       <CardHeader>
@@ -136,7 +137,7 @@ const SuccessStories = () => {
                         <CardDescription>{entrepreneur.location} | {entrepreneur.business}</CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <p className="mb-4">{entrepreneur.story}</p>
+                        <p className="mb-4 text-sm">{entrepreneur.story}</p>
                         <div className="bg-primary/10 p-3 rounded-md">
                           <p className="font-semibold text-primary">Monthly Earnings: {entrepreneur.earnings}</p>
                         </div>
@@ -156,7 +157,7 @@ const SuccessStories = () => {
             
             <div className="grid md:grid-cols-3 gap-6">
               {customerReviews.map((review, index) => (
-                <Card key={index}>
+                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
                     <CardTitle>{review.name}</CardTitle>
                     <CardDescription>{review.location}</CardDescription>
@@ -179,20 +180,5 @@ const SuccessStories = () => {
     </div>
   );
 };
-
-const Star = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-  </svg>
-);
 
 export default SuccessStories;
